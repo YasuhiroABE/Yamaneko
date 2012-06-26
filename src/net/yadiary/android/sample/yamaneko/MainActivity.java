@@ -15,6 +15,7 @@
 //
 package net.yadiary.android.sample.yamaneko;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager;
@@ -41,7 +42,12 @@ public class MainActivity extends FragmentActivity implements LoaderManager.Load
 		bundle.putString(JPostalProvider.FIELD_CODEPREFIX, codep);
 		bundle.putString(JPostalProvider.FIELD_CODESUFFIX, codes);
 		bundle.putString(JPostalProvider.FIELD_QID, "" + new java.util.Date().getTime());
+		
 		getSupportLoaderManager().restartLoader(0, bundle, listFragment);
+		Loader<Void> loader = getSupportLoaderManager().getLoader(1);
+		if(loader != null) {
+			loader.abandon();
+		}
 		getSupportLoaderManager().restartLoader(1, bundle, this);
 	}
 

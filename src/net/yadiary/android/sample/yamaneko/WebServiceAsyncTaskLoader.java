@@ -62,11 +62,17 @@ public class WebServiceAsyncTaskLoader extends AsyncTaskLoader<Void> {
 		int page = 1;
 		int pageTotal = 1;
 		while (page <= pageTotal) {
+			if(isAbandoned()) {
+				break;
+			}
 			JsonBean bean = SearchEngine.search(codep, codes, page);
 			pageTotal = Integer.parseInt(bean.getPageTotal());
 			ArrayList<HashMap<String, String>> rows = bean.getRows();
 
 			for (int i = 0; i < rows.size(); i++) {
+				if(isAbandoned()) {
+					break;
+				}
 				ContentValues values = new ContentValues();
 				HashMap<String, String> row = rows.get(i);
 				for (String label : new String[] { JPostalProvider.FIELD_CODEPREFIX, JPostalProvider.FIELD_CODESUFFIX,
