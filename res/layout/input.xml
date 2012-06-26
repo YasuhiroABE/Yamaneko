@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/input.textview.title"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center_horizontal"
+            android:text="@string/input.textview.pcodesymbol"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <EditText
+            android:id="@+id/editTextView3Digits"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:ems="10"
+            android:hint="@string/input.edittext.3digits.hint"
+            android:inputType="number"
+            android:maxLength="3"
+            android:text="@string/input.edittext.3digits.default" >
+            <requestFocus />
+        </EditText>
+        <EditText
+            android:id="@+id/editTextView4Digits"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:ems="10"
+            android:hint="@string/input.edittext.4digits.hint"
+            android:inputType="number"
+            android:maxLength="4"
+            android:text="@string/input.edittext.4digits.default" />
+        <Button
+            android:id="@+id/buttonViewSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="@string/input.button.search" />
+    </LinearLayout>
+</LinearLayout>

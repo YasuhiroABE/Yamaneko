@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yamaneko</string>
+    <string name="input.textview.title">検索する郵便番号を入力してください</string>
+    <string name="input.textview.pcodesymbol">〒</string>
+    <string name="input.edittext.3digits.hint">3桁</string>
+    <string name="input.edittext.3digits.default">965</string>
+    <string name="input.edittext.4digits.hint">4桁</string>
+    <string name="input.edittext.4digits.default">001</string>
+    <string name="input.button.search">検索</string>
+    <string name="list.textview.prefix">件数：</string>
+    <string name="menu.main.copyright.title">著作権について</string>
+    <string name="menu.main.copyright">Copyright (©) 2012 Yasuhiro ABE \n\nSource Code is available from;\ngit://github.com/YasuhiroABE/Yamaneko.git</string>
+</resources>
